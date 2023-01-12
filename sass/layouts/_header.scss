@@ -1,0 +1,354 @@
+
+.header{
+    position: relative;
+
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color:#ECECEC;
+ }
+ 
+ .main-nav{
+     display: flex;
+     align-items: center;
+ }
+ 
+ 
+ 
+ .navigation__list{
+     font-weight: 500;
+     display: flex;
+    margin-left: 88px;
+    @media screen and (min-width:1200px){
+         margin-left: 93px;
+    }
+ }
+ 
+ .activ,
+ .navigation__link,
+ .contacts__link{
+     display: block;
+     align-items: center;
+     
+    @media screen and (min-width:1200px){
+     padding-top: 32px;
+     padding-bottom: 32px;
+    }
+ } 
+ .contacts-tel__link{  
+    margin-right: 0px;
+ }
+ 
+ 
+ .navigation__list .navigation__item:not(:last-child){
+     margin-right: 50px;
+ }
+ 
+  
+ .activ{
+     position: relative;
+     color:var(--accent-color);
+     &.link::after {
+     content: "";
+     position: absolute;
+     left: 0;
+    bottom: -32px;
+     width: 100%;
+     height: 4px;
+     background:var(--accent-color);
+     border-radius: 2px;
+      @media screen and (min-width:1200px){
+     bottom: 0px;
+ }   
+ }
+ }
+
+ .activ.link { 
+     text-decoration: none;
+     font-weight: 500;
+     font-size: 14px;
+     line-height: 1.14;
+     letter-spacing: 0.02em;
+     color: var(--accent-color);
+     background-color: var(--primary-bg-color);  
+ }
+ 
+ 
+ .navigation .link{
+     font-weight: 500;
+     font-size: 14px;
+     line-height: 1.14;
+     letter-spacing: 0.02em;
+ }
+ 
+ .navigation{
+    display: none;
+    @media screen and (min-width:768px){
+        display: flex;
+    }
+ }
+ .contacts{
+    display: none;
+    @media screen and (min-width:768px){
+    display: block;
+    margin-left: 68px;
+    margin-right: 0px;
+
+    }
+    @media screen and (min-width:1200px){
+    display: flex;
+    margin-left: auto;
+}
+     
+     font-weight: 500;
+     & .contacts__item:not(:last-child){
+     margin-right: 40px;
+ }
+ }
+ 
+ 
+ 
+ .navigation__item{
+     display: flex;
+     align-items: center;
+ }
+ 
+ .contacts__icons{
+    fill: currentColor;
+    margin-right: 10px;
+ }
+ 
+ 
+ 
+ .contacts-mail__link,
+ .contacts-tel__link{
+     display: flex;
+     text-align: center;
+    //  align-items: center;
+     font-weight: 500;
+     line-height: 1.14;
+     letter-spacing: 0.02em;
+     color:var(--primary-text-color);
+     &:hover,
+     &:focus{
+     fill: var(--accent-color);
+ }
+ }
+  
+ .contacts-mail__link{
+    margin-bottom: 10px;
+    margin-right: 0px;
+    @media screen and (min-width:1200px){
+        margin-bottom: 0px;
+    }
+ }
+.contacts-tel__link{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+
+//  Menu button
+ .menu-open{
+    margin-left: auto;
+    display: inline-block;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    &:hover,
+    :focus{
+        cursor:pointer ;
+        fill: var(--accent-color);
+    }
+    @media screen and(min-width: 768px) {
+        display: none;
+    }
+ }
+ .menu-open .cross-icon{
+    display: none; 
+ }
+ .menu-open .menu-icon{
+    display: block;
+
+ }
+ .menu-open.is-open .menu-icon{
+    display: block;
+    
+ }
+ .menu-open.is-open .cross-icon{
+    display: block;
+    
+ }
+
+//  Menu modal
+
+.mob-icon{
+    color: #212121;
+}
+.mob-icon:hover,
+.mob-icon:focus{
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.mob-menu{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+
+    &.is-open {
+        display: flex;
+        flex-wrap: wrap;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        
+        background-color: var(--primary-bg-color);
+        padding: 21px 0px;
+    }
+    .mob-btn{
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    // &.container {
+    //     // display: block;
+    //     display: flex;
+    //     height: 100%;
+    //     padding: 21px 0px;
+    // }
+
+    @media screen and (min-width:768px) {
+        opacity: 0;
+    }
+}
+.mob-menu .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.mob-menu-close.is-open{
+
+}
+
+.mob-menu-close {
+    display: flex;
+    border: none;
+    margin-left: auto;
+    margin-right: 0px;
+}
+//  .mob-menu{
+//     display: none;
+//     height: 100vh;
+//     width: 100vw;
+//     left: 0;
+//     top: 0;
+//     &.is-open{
+//         display: block;
+//         position: fixed;
+//         height: 100vh;
+//         width: 100vw;
+//         background-color:var(--primary-bg-color);
+//         padding: 21px 0px;
+//     }
+//     &.container{
+//         display: block;
+//         height: 100vh;
+//         padding: 21px 0px;
+//     }
+//         @media screen and (min-width:768px){
+//             opacity: 0;
+//         }
+//  }
+//  .mob-menu-close{
+//     display: block;
+//     border: none;
+//     margin-left: auto;
+//     margin-right: 0px;
+//  }
+
+.mob-navigation{
+    width: 100%;
+}
+  .mob-navigation__link.activ.link {
+    font-weight: 500;
+        font-size: 40px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        padding: 0;
+      color: var(--accent-color);
+      background-color: var(--primary-bg-color);
+  }
+  .mob-navigation__link.activ.link::after{
+    display: none;
+  }
+ .mob-navigation__list{
+    font-weight: 500;
+        font-size: 40px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+ }
+ .mob-navigation__link .activ{
+
+ }
+ .mob-navigation__list .mob-navigation__item:not(:last-child) {
+     margin-bottom: 32px;
+ }
+ .mob-navigation{
+    display: flex;
+    flex-wrap: wrap;
+
+ }
+
+ .mob-contacts-tel__link{
+    font-weight: 500;
+        font-size: 34px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        color: #2196F3;
+    
+ }
+ .mob-contacts-mail__link{
+    font-weight: 500;
+        font-size: 24px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        color: #757575;
+        margin-top: 32px;
+ }
+ .mob-contacts__item:not(:last-child){
+     margin-bottom: 32px;
+ }
+ .mob-contacts__item:last-child{
+    margin-bottom: 64px;
+ }
+ .mob-soc-items{
+    margin-right: 0;
+        
+ }
+ .mob-soc-list.list{
+     display: flex; 
+     flex-wrap: wrap;
+     
+ }
+ .mob-soc-items:not(:last-child){
+    margin-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, .2);
+    padding-right: 10px;
+ }
+
+
+
+ .mob-soc__link{
+    font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        letter-spacing: 0.02em;
+        color: #2196F3;
+    
+ }
+ 
+ .mob-soc__link:not(:last-child){
+        border-right: 1px solid rgba(33, 33, 33, .2);
+    }
+ 
